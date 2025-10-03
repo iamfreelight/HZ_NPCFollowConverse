@@ -93,8 +93,6 @@ class HZ_NPCFollowConverse extends Component<typeof HZ_NPCFollowConverse> {
         this.async.setInterval(() => {
             if (!this.following && !this.activePlayer) this.wander();
         }, this.props.wanderInterval!);
-
-        this.updateLoop();
     }
 
    private startFollowing(player: Player) {
@@ -148,13 +146,6 @@ class HZ_NPCFollowConverse extends Component<typeof HZ_NPCFollowConverse> {
       await this.npcConversation.startListeningTo(player, ConversationResponseTrigger.Automatic);
     }
 
-    private async updateLoop() {
-      while (true) {
-        await new Promise<void>(res => this.async.setTimeout(() => res(), 200));
-        // No additional logic needed; following handled in startFollowing
-      }
-    }
-
     private wander() {
       if (!this.npcPlayer) return;
 
@@ -170,5 +161,6 @@ class HZ_NPCFollowConverse extends Component<typeof HZ_NPCFollowConverse> {
       if (this.props.debugMode) console.log(`[DEBUG] NPC wandering to ${targetPos.x.toFixed(2)}, ${targetPos.z.toFixed(2)}`);
     }
 }
+
 
 Component.register(HZ_NPCFollowConverse);
