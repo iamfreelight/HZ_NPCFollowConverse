@@ -1,11 +1,12 @@
 # HZ_NPCFollowConverse
 
 A reusable TypeScript component for **Meta Horizons** that gives your NPCs interactive behavior.  
-Attach this script to the root of your NPC and place a **TriggerGizmo** inside (clickable). When clicked, the NPC will:
 
 ![Screenshot 1](ss1.jpg)
 ![Screenshot 2](ss2.jpg)
 ![Screenshot 2](ss3.jpg)
+
+Attach this script to the root of your NPC and place a **TriggerGizmo** inside (clickable). When clicked, the NPC will:
 
 - **Single click:** Start a conversation with the player.  
 - **Double click:** Toggle follow mode — the NPC will follow the player, face them, and maintain a personal space buffer.  
