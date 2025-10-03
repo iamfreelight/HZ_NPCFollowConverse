@@ -5,6 +5,7 @@ Attach this script to the root of your NPC and place a **TriggerGizmo** inside (
 
 ![Screenshot 1](ss1.jpg)
 ![Screenshot 2](ss2.jpg)
+![Screenshot 2](ss3.jpg)
 
 - **Single click:** Start a conversation with the player.  
 - **Double click:** Toggle follow mode — the NPC will follow the player, face them, and maintain a personal space buffer.  
